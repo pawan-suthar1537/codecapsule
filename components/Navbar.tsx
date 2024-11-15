@@ -47,7 +47,7 @@ export function Navbar({
           <h1 className="whitespace-pre">Code Capsule</h1>
         </Link>
       </div>
-      <div>
+      <div className="flex items-center gap-1 md:gap-4">
         <TooltipProvider>
           <Tooltip delayDuration={0}>
             <TooltipTrigger asChild>
@@ -88,13 +88,15 @@ export function Navbar({
                 disabled={false}
               >
                 {theme === "light" ? (
-                  <SunIcon className="h-4 w-4" />
-                ) : (
                   <MoonIcon className="h-4 w-4" />
+                ) : (
+                  <SunIcon className="h-4 w-4" />
                 )}
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Toggle Theme</TooltipContent>
+            <TooltipContent>
+              {theme === "light" ? "Dark Mode" : "Light Mode"}
+            </TooltipContent>
           </Tooltip>
         </TooltipProvider>
         {session ? (
@@ -120,8 +122,8 @@ export function Navbar({
             </TooltipProvider>
           </DropdownMenu>
         ) : (
-          <Button variant={"default"} onClick={showLogin}>
-            Sign in <ArrowRight className="ml-2 h-4 w-4" />
+          <Button variant={"default"} onClick={showlogin}>
+            Sign in <ArrowRight className=" h-4 w-4" />
           </Button>
         )}
       </div>

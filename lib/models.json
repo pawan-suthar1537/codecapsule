@@ -1,0 +1,11 @@
+{
+  "models": [
+    {
+      "id": "o1-preview",
+      "provider": "OpenAi",
+      "providerId": "openai",
+      "name": "o1 (Preview)",
+      "multimodel": true
+    }
+  ]
+}
